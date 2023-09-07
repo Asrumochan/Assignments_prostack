@@ -1,0 +1,61 @@
+:root{
+    --bg-primary:#FFF0DF;
+    --bg-blue:#011F44;
+
+    --text-primary:#422439;
+    --text-secondary:#E5F4FB;
+    --text-blue:011F44;
+    --text-title:#A33740;
+}
+.wrapper{
+    font-family: 'Inter';
+}
+.container-1{
+    background-image: url(./images/frame-1.png);
+    background-color: var(--bg-primary);
+    background-position: left center;
+    background-repeat: no-repeat;
+
+}
+button.nav{
+background-color: var(--bg-blue);
+color: var(--text-secondary);
+}
+.c1-content{
+    color: var(--bg-blue);
+}
+.c1-btn1{
+    background-color: var(--bg-blue);
+    color:var(--text-secondary);
+}
+.c1-btn2{
+    border:1px solid var(--bg-blue);
+}
+.container-2,.container-4,.container-6{
+    background-color: var(--bg-primary);
+    color:var(--text-primary)
+}
+.title{
+    color:var(--text-title)
+}
+.c2-btn{
+    background-color: #FFA878;
+}
+.container-3,.container-5,.container-8{
+    background-color: #FFF6EB;
+    color: var(--text-primary);
+}
+.container-7{
+     background-color: #FFA878;
+}
+.container-9{
+    background-color: #6B2837;
+    color: #FFE3C2;
+}
+button.c9-btn{
+    background-color: #FBC73B;
+    color: #422439;
+}
+.container-10{
+    background-color: #011F44;
+}
