@@ -6,6 +6,7 @@
     --text-secondary:#E5F4FB;
     --text-blue:011F44;
     --text-title:#A33740;
+    --text-title-10:#B2DDF2;
 }
 .wrapper{
     font-family: 'Inter';
@@ -58,4 +59,17 @@ button.c9-btn{
 }
 .container-10{
     background-color: #011F44;
+    color: #FFFFFF;
+}
+.container-10-title{
+ color: var(--text-title-10);
+}
+.container10-ebox{
+    background-color: #FFFFFF;
+    color: #434343;
+}
+.container10-btn
+{
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;   
 }
