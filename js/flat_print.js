@@ -4,7 +4,7 @@ const flat_print=function (arr) {
 arr=[['Hello'], [[2]], [[[['everyone']]]]];
 arr1=flat_print(arr);
 console.log(arr1);
-var str=" ";
+var str="";
 arr1.forEach(element => {
     str=str.concat(" ",element)
 });
