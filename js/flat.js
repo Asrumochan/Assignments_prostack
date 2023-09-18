@@ -5,10 +5,17 @@ const flat=function (str) {
             continue;
         }
         else
-        a.push(str[i]);
+        a.push(Number(str[i]));
     }
     return a;
 }
 
-str="[[[[123]]]]";
-console.log(flat(str));
+str="[[[[12]]]]";
+arr1=flat(str);
+var res=0;
+var mul=1;
+arr1.forEach(element => {
+    res=res+element*mul;
+    mul*=10;
+});
+console.log(res.toString().split('').reverse().join(''));
