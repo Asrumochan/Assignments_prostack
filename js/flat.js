@@ -10,12 +10,14 @@ const flat=function (str) {
     return a;
 }
 
-str="[[[[12]]]]";
+str="[[[[1234]]]]";
 arr1=flat(str);
-var res=0;
-var mul=1;
+res=0;
 arr1.forEach(element => {
-    res=res+element*mul;
-    mul*=10;
+    res=res*10+element;
 });
-console.log(res.toString().split('').reverse().join(''));
+console.log(res);
+
+//reverse a number :
+num=13456;
+console.log(num.toString().split('').reverse().join(''));
