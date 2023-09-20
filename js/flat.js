@@ -14,10 +14,10 @@ str="[[[[1234]]]]";
 arr1=flat(str);
 res=0;
 arr1.forEach(element => {
-    res=res*10+element;
+    res=res*10+ parseInt(element);
 });
 console.log(res);
 
 //reverse a number :
-num=13456;
-console.log(num.toString().split('').reverse().join(''));
+// num=13456;
+// console.log(num.toString().split('').reverse().join(''));
