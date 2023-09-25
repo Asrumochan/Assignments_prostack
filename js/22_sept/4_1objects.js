@@ -109,7 +109,7 @@ arr=[{
   {
     "userId": 1,
     "id": 19,
-    "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
+    "title": "molestiae ipsa aut voluptatibus ",
     "completed": true
   },
   {
@@ -126,6 +126,7 @@ arr=[{
   },
   {
     "userId": 2,
+      "id" :22,
     "title": "distinctio vitae autem nihil ut molestias quo",
     "completed": true
   },
@@ -139,14 +140,13 @@ arr1=arr.filter((val)=>{
     return val.completed === true;
 });
 // console.log(arr1);
- arr2=arr1.filter((val)=>{
-    if (val.id && val.title) {
-      return val;
-    }
+ arr2=arr1.map((val)=>{
+    temp={id:val.id,title:val.title}
+    return temp;
  });
-  // console.log(arr2);
+  console.log(arr2);
 
   arr3=arr2.map((val)=>{
     return val.id;
   });
-  console.log(arr3);
+  // console.log(arr3);
