@@ -149,4 +149,4 @@ arr1=arr.filter((val)=>{
   arr3=arr2.map((val)=>{
     return val.id;
   });
-  // console.log(arr3);
+  console.log(arr3);
