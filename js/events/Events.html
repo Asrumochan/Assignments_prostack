@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="margin-left: 40%;">Javascript Events  <button id="th" onclick="theme()"> change to dark theme</button></h1>
+    <div class="container">
+        <div class="item">
+            <h1>onMouseover :</h1>
+            <h5>mouse over to change button background color</h5>
+            <button id="over" onmouseover="over()">mouseOver</button>
+        </div>
+        <div class="item">
+            <h1>onMouseout :</h1>
+            <h5>mouse over to change button background color</h5>
+            <button id="out" onmouseout="out()">mouseOver</button>
+        </div>
+        <div class="item">
+            <h1>onClick :</h1>
+            <h5>click to change button background color</h5>
+            <button id="clic" onclick="clic()">onClick</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <h1>ondblClick :</h1>
+            <h5>double click to change button background color</h5>
+            <button id="dblclick" ondblclick="dblclick()">dblclick</button>
+        </div>
+        <div class="item">
+            <h1>onFocus :</h1>
+            <h5>click on input to change  background color</h5>
+            <input type="text" id="focu" onfocus="focu()" onblur="">
+        </div>
+        <div class="item">
+            <h1>onBlur :</h1>
+            <h5>change lower case to upper case onblur events</h5>
+            <input type="text" id="onblu" onblur="onblu()">
+        </div>
+    </div>
+</body>
+<script>
+    function over(){
+        document.getElementById('over').style.backgroundColor='blue'
+    }
+    function out(){
+        document.getElementById('out').style.backgroundColor='blue'
+    }
+    function clic(){
+        document.getElementById('clic').style.backgroundColor='blue'
+    }
+    function dblclick(){
+        document.getElementById('dblclick').style.backgroundColor='blue'
+    }
+    function focu(){
+        document.getElementById('focu').style.backgroundColor='pink'
+    }
+    function onblu(){
+        document.getElementById('onblu').style.textTransform='uppercase'
+    }
+    function theme(){
+        if(document.getElementById('th').textContent.includes('dark')){
+            document.getElementById('th').style.backgroundColor='white';
+            document.getElementById('th').style.color='black';
+            document.getElementById('th').textContent='change to light theme'
+            document.body.style.backgroundColor='black'
+            document.body.style.color='white';
+        }
+        else{
+        document.getElementById('th').textContent='change to dark theme'
+        document.getElementById('th').style.backgroundColor='black';
+            document.getElementById('th').style.color='white';
+            document.body.style.backgroundColor='white'
+            document.body.style.color='black';
+        }
+    }
+</script>
+</html>
