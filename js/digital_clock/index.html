@@ -48,7 +48,7 @@
             const date=date1.getDate();
             const month=date1.getMonth()+1;
             const year=date1.getFullYear()
-            const hour=date1.getHours();
+            const hour=date1.getHours()%12;
             const minute=date1.getMinutes();
             const seconds=date1.getSeconds();
             document.getElementById('second').innerHTML=seconds;
