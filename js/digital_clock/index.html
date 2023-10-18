@@ -28,7 +28,7 @@
                 <div class="display">
                     <span>21</span>
                     <span>02</span>
-                    <span>10</span>
+                    <span id="second">10</span>
                 </div>
                 <div class="days">
                     <span class="day">mon</span>
@@ -44,8 +44,9 @@
     </div>
     <script>
         setInterval(() => {
-            const date1=new Date().toLocaleTimeString();
-        document.getElementById('abc').innerHTML=date1;
+            const date1=new Date();
+            const seconds=date1.getSeconds();
+        document.getElementById('second').innerHTML=seconds;
         }, 1000);
     </script>
 </body>
