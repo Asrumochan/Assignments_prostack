@@ -31,13 +31,13 @@
                     <span id="second">10</span>
                 </div>
                 <div class="days">
-                    <span class="day">mon</span>
-                    <span class="day">tue</span>
-                    <span class="day">wed</span>
-                    <span class="day">thur</span>
-                    <span class="day">fri</span>
-                    <span class="day">sat</span>
-                    <span class="day">sun</span>
+                    <span class="day" id="mon">mon</span>
+                    <span class="day" id="tue" >tue</span>
+                    <span class="day" id="wed">wed</span>
+                    <span class="day" id="thu">thur</span>
+                    <span class="day" id="fri">fri</span>
+                    <span class="day" id="sat">sat</span>
+                    <span class="day" id="sun">sun</span>
                 </div>
             </div>
         </div>
@@ -51,6 +51,33 @@
             const hour=date1.getHours()%12;
             const minute=date1.getMinutes();
             const seconds=date1.getSeconds();
+            const day=date1.getDay();
+            console.log(day);
+            switch (day) {
+                case 0:
+                    document.getElementById('mon').style.backgroundColor="lime";
+                    break;
+                case 1:
+                    document.getElementById('tue').style.backgroundColor="lime";
+                    break;
+                case 2:
+                    document.getElementById('wed').style.backgroundColor="lime";
+                    break;
+                case 3:
+                    document.getElementById('thu').style.backgroundColor="lime";
+                    break;
+                case 4:
+                    document.getElementById('fri').style.backgroundColor="lime";
+                    break;
+                case 5:
+                    document.getElementById('sat').style.backgroundColor="lime";
+                    break;
+                case 6:
+                    document.getElementById('sun').style.backgroundColor="lime";
+                    break;
+                default:
+                    break;
+            }
             document.getElementById('second').innerHTML=seconds;
             document.getElementById('minute').innerHTML=minute
             document.getElementById('hour').innerHTML=hour;
