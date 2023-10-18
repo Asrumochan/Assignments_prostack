@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    color: lime;
+
+}
+.borderr{
+    height: 95vh;
+    width: 70%;
+    margin: auto;
+    border: groove silver 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    height: 90%;
+    width: 93%;
+    border: groove silver 2px;
+    border-radius: 15px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.label-1,.label-2{
+    width: 700px;
+    height: 30px;
+    border: groove silver 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.display{
+    width: 700px;
+    height: 50px;
+    border: groove silver 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.days{
+    width: 80%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+.day{
+    height: 20px;
+    width: 50px;
+    background-color: white;
+    color: black;
+}
