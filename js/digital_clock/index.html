@@ -26,8 +26,8 @@
                     <span>SECOND</span>
                 </div>
                 <div class="display">
-                    <span>21</span>
-                    <span>02</span>
+                    <span id="hour">21</span>
+                    <span id="minute"></span>
                     <span id="second">10</span>
                 </div>
                 <div class="days">
@@ -45,8 +45,18 @@
     <script>
         setInterval(() => {
             const date1=new Date();
+            const date=date1.getDate();
+            const month=date1.getMonth()+1;
+            const year=date1.getFullYear()
+            const hour=date1.getHours();
+            const minute=date1.getMinutes();
             const seconds=date1.getSeconds();
-        document.getElementById('second').innerHTML=seconds;
+            document.getElementById('second').innerHTML=seconds;
+            document.getElementById('minute').innerHTML=minute
+            document.getElementById('hour').innerHTML=hour;
+            document.getElementById('date').innerHTML=date;
+            document.getElementById('month').innerHTML=month;
+            document.getElementById('year').innerHTML=year;
         }, 1000);
     </script>
 </body>
