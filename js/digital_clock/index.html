@@ -10,7 +10,7 @@
     <div class="container">    
         <div class="borderr">
             <div class="content">
-                <div class="label-1">
+                <div class="label one">
                     <span>DATE</span>
                     <span>MONTH</span>
                     <span>YEAR</span>
@@ -20,12 +20,12 @@
                     <span id="month">02</span>
                     <span id="year">10</span>
                 </div>
-                <div class="label-2">
+                <div class="label" style="width: 90%;" >
                     <span>HOUR</span>
                     <span>MINUTE</span>
                     <span>SECOND</span>
                 </div>
-                <div class="display">
+                <div class="display time" style="width: 90%;height: 80px;font-size: 55px;">
                     <span id="hour">21</span>
                     <span id="minute"></span>
                     <span id="second">10</span>
@@ -39,6 +39,19 @@
                     <span class="day" id="sat">sat</span>
                     <span class="day" id="sun">sun</span>
                 </div>
+                <div class="last">
+                    <p>TEMP &nbsp;</p>
+                    <div class="temp">28</div>
+                    <p>&nbsp; ° C</p>
+                    <div class="pa">
+                        <div style="display: flex;align-items: center;">
+                            <div class="ap" id="am"></div> &nbsp <p>AM</p>
+                        </div>
+                        <div style="display: flex;align-items: center;">
+                            <div class="ap" id="pm"></div> &nbsp <p>PM</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -47,12 +60,16 @@
             const date1=new Date();
             const date=date1.getDate();
             const month=date1.getMonth()+1;
-            const year=date1.getFullYear()
+            const year=date1.getFullYear()-2000;
             const hour=date1.getHours()%12;
             const minute=date1.getMinutes();
             const seconds=date1.getSeconds();
             const day=date1.getDay();
-            console.log(day);
+            if (date1.getHours()>=12) {
+                document.getElementById('pm').style.backgroundColor='lime'
+            } else {
+                document.getElementById('am').style.backgroundColor='lime'
+            }
             switch (day) {
                 case 1:
                     document.getElementById('mon').style.backgroundColor="lime";
