@@ -86,3 +86,11 @@ body{
     justify-content: space-between;
     text-align: center;
 }
+.foot{
+    color: white ;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+}
