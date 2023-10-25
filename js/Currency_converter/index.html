@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Convert</title>
+    <link rel="icon" href="./currency-exchange.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./main.js" type="text/javascript"></script>
 </head>
 <body>
     <div class=" bg-black h-[80px] w-full text-white ">
     </div> 
     <div class="h-[300px] bg-gradient-to-r from-purple-500 to-pink-500">
-        <div class="bg-violet-200  h-[50px] w-full flex justify-around sticky top-0">
+        <div class="bg-violet-200  h-[50px] w-full flex justify-around sticky top-0 opacity-75 ">
             <div class="w-[250px] flex justify-between items-center">
                 <img class="h-[40px] w-[50px]" src="./currency-exchange.png" alt="">
                  <button class="hover:bg-slate-100 rounded h-[35px] w-[100px]">Personal</button>
@@ -47,7 +49,7 @@
                 <div class="w-[30%] h-full flex flex-col justify-evenly">
                     <p>From</p>
                     <div class="h-[40px] flex items-center border border-neutral-600 rounded">
-                        <select class="w-full " style="outline: none;" id="symbol" onclick="logo_change()">
+                        <select class="w-full " style="outline: none;" id="symbol" onchange="logo_change()">
                             <option>IND</option>
                             <option>USA</option>
                         </select>
@@ -70,7 +72,7 @@
             </div>
             <div class="h-[40px] w-[80%] ml-[100px] mt-[50px] flex justify-between" >
                 <div class="w-[700px]">
-                    <p>©️ We use the mid-market rate for our Converter. This is for informational purposes only. You won’t receive this rate when sending money. </p>
+                    <p><strong class="text-cyan-600">©️</strong> We use the mid-market rate for our Converter. This is for informational purposes only. You won’t receive this rate when sending money. </p>
                 </div>
                 <button class="bg-blue-700 text-white h-[40px] w-[150px] rounded hover:opacity-80 " onclick="change()">
                     Convert
@@ -79,61 +81,5 @@
         </div>
         <img src="./chart.png" alt="" class="mt-[150px]">
     </div>
-   
 </body>
-<script>
-    function logo_change(){
-    var symbol=document.getElementById('symbol').value;
-    console.log(symbol);
-    if(symbol.includes('USA')==true){
-        document.getElementById("logo").innerHTML='$';
-        console.log(val1*83.0922);
-    }
-    else{
-        document.getElementById("logo").innerHTML='₨';
-    }
-}
-function change(){
-    var symbol=document.getElementById('symbol').value;
-    var symbol1=document.getElementById('symbol1').value;
-    var val1=Number(document.getElementById('in').value);
-    if(symbol.includes('USA')==true && symbol1.includes('IND') ==true){
-        document.getElementById('display').style.height='100px';
-        document.getElementById('display').style.marginLeft='80px';
-        document.getElementById('display').style.width='100%';
-        document.getElementById('content').style.height='400px';
-        let res= `<br> <ul>
-        <li class='text-gray-500'>${val1} US Dollars =</li>
-        <li class='text-3xl'>${(val1*83.0922).toFixed(3)} Indian Rupees </li>
-        <li  class='text-gray-500'>1 INR = 0.0120385 USD</li>
-        <li  class='text-gray-500'>1 USD = 83.0668 INR</li>
-    </ul>  `
-        document.getElementById("display").innerHTML=res;
-    }
-    else if(symbol.includes('IND')==true && symbol1.includes('USA') ==true){
-        document.getElementById('display').style.height='100px';
-        document.getElementById('display').style.marginLeft='80px';
-        document.getElementById('display').style.width='100%';
-        document.getElementById('content').style.height='400px';
-        let res= `<br> <ul>
-        <li class='text-gray-500'>${val1} Indian Rupees=</li>
-        <li class='text-3xl'>${(val1/83.0922).toFixed(3)}  US Dollars </li>
-        <li  class='text-gray-500'>1 INR = 0.0120385 USD</li>
-        <li  class='text-gray-500'>1 USD = 83.0668 INR</li>
-    </ul>  `
-        document.getElementById("display").innerHTML=res;
-    }
-    else{
-        alert('Enter another currency to convert')
-    }
-}
-function reverse_val(){
-    var symbol=document.getElementById('symbol').value;
-    var symbol1=document.getElementById('symbol1').value;
-    var temp=document.getElementById('symbol').value;
-    document.getElementById('symbol').value=symbol1;
-    document.getElementById('symbol1').value=temp;
-
-}
-</script>
 </html>
